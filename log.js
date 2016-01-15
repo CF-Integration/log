@@ -149,11 +149,7 @@
 
   exportedLog.l = _log;
 
-  if (typeof define === 'function' && define.amd) {
-    define(function() {
-      return exportedLog;
-    });
-  } else if (typeof exports !== 'undefined') {
+  if (typeof exports !== 'undefined') {
     module.exports = exportedLog;
   } else {
     window.log = exportedLog;
